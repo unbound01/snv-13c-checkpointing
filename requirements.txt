@@ -1,0 +1,20 @@
+# =============================================================================
+# requirements.txt — SnV/¹³C checkpointing simulation pipeline (parts 1–5)
+#
+# Only three third-party packages are imported anywhere in the code:
+#   numpy, matplotlib, qutip
+# (scipy is installed automatically as a hard dependency of qutip.)
+# Everything else is Python standard library.
+#
+# Minimum versions are set by the APIs actually used:
+#   qutip      >= 4.7   mesolve / Qobj / Bloch(axes=ax); both 4.x and 5.x work
+#   matplotlib >= 3.5   fig.add_subplot(projection='3d'), tables, fill_between
+#   numpy      >= 1.21  standard ndarray APIs only
+#
+# Compatibility note: if pip resolves the QuTiP 4.x line and you hit
+# numpy-2-related errors, either upgrade to QuTiP 5 or add the pin: numpy<2
+# =============================================================================
+
+numpy>=1.21
+matplotlib>=3.5
+qutip>=4.7
